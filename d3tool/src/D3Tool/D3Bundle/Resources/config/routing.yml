@@ -1,0 +1,3 @@
+d3_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: D3Bundle:Default:index }
