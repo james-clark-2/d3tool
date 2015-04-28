@@ -1,5 +1,7 @@
 <?php
 
+namespace D3Tool\D3Bundle\Resources\Library;
+
 class D3ProfileFactory
 {
     private $location = '';
@@ -13,6 +15,11 @@ class D3ProfileFactory
     public function getProfile ($username = '')
     {
         $profile_url = $this->location.'.'.$this->profile_addr.$username.'/';
+        
+        //Change '#' to '-'
+        $profile_url = str_replace('#', '-', $profile_url);
+        
+        echo "Querying ".$profile_url."<br/>";
 
         $curl = curl_init();
 
