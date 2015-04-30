@@ -14,6 +14,7 @@ class DefaultController extends Controller
         $result = $factory->getProfile($bnet_id);
         
         return $this->render('D3Bundle:Default:index.html.twig', array('locale' => $locale,
+                                                                       'url' => $factory->buildProfileURL($bnet_id),
                                                                        'bnet_id' => $bnet_id,
                                                                        'result' => $result));
     }

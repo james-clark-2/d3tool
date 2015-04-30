@@ -1,3 +1,11 @@
-BattleNet ID: {{ bnet_id }}<br/>
-Locale: {{ locale }}<br/>
-JSON Result:<br/>{{ result }}
+<html>
+    <head>
+        <link href="{{ asset('css/default.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>BattleNet ID: {{ bnet_id }}</p>
+        <p>Locale: {{ locale }}</p>
+        <p>JSON Result from {{ url }}:</p>
+        <p>{{ result }}</p>
+    </body>
+</html>
